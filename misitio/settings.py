@@ -25,7 +25,7 @@ SECRET_KEY = '2pilad4fj-9t=kvfc1=9d=71i#-3bg+g%^^+v__wed#v3dj7m8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rayo2102.pythonanywhere.com',]
 
 
 # Application definition
