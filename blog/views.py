@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.utils import timezon
+from django.utils import timezone
 from .models import Publicar
 
 def listar(request):
