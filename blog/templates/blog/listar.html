@@ -1,14 +1,21 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<div>
-  <h1><a href="/">Django Blog</a></h1>
-<div>
-
-    {% for p in articulos %}
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Blog/title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
       <div>
-        <p>Publicado: {{ p.fecha_publicacion }} </p>
-        <h1><a href="">{{ p.titulo }}</a></h1>
-        <p>{{ p.texto|linebreaksbr }}</p>
+        <h1><a href="/">Django Blog</a></h1>
       </div>
-    {% endfor %}
-</div>
+      {% for p in articulos %}
+        <div>
+          <p>Publicado: {{ p.fecha_publicacion }} </p>
+          <h1><a href="">{{ p.titulo }}</a></h1>
+          <p>{{ p.texto|linebreaksbr }}</p>
+        </div>
+      {% endfor %}
+    </body>
+  </html>
