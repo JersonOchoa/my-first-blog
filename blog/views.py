@@ -7,5 +7,5 @@ def listar(request):
     return render(request, 'blog/listar.html', {'articulos': articulos})
 
 def detalle(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/detalle.html', {'post': post})
+    detalle = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/detalle.html', {'detalle': detalle})
