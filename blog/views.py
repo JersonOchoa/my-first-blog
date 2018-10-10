@@ -20,7 +20,7 @@ def post_new(request):
             post.autor = request.user
             post.fecha_publicacion = timezone.now()
             post.save()
-            return redirect('listar')
+            return redirect('detalle', pk=post.pk)
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
