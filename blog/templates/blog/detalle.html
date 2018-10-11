@@ -10,7 +10,7 @@
       <a class="btn btn-default" href="{% url 'post_publish' pk=detalle.pk %}">Publicar</a>
     {% endif %}
     <a class="btn btn-default" href="{% url 'post_edit' pk=detalle.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-    <a class="btn btn-default" href="{% url 'post_remove' pk=listar.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+    <a class="btn btn-default" href="{% url 'post_remove' pk=detalle.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
     <h1>{{ detalle.titulo }}</h1>
     <p>{{ detalle.texto|linebreaksbr }}</p>
   </div>
